@@ -69,4 +69,18 @@ nav {
 }
 
 
+/* TWEETS */
+
+.tweets__container {
+    border: 1px solid #5C415D;
+    border-radius: 0.5rem;
+}
+
+.tweets__user {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+
 
