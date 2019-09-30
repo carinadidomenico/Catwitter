@@ -1,0 +1,72 @@
+/* BASE */
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    width: 80vw;
+    margin: auto;
+}
+
+/* NAVBAR */
+
+nav {
+    background-color: #FFFC31;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    margin: auto;
+}
+
+.menu img {
+    width: 2.5rem;
+}
+
+/* TYPER */
+
+.typer {
+    margin: 1rem auto;
+}
+
+.typer__content {
+    display: flex;
+    flex-direction: column;    
+}
+
+.typer__content textarea {
+    border-radius: 0.5rem;
+    margin-top: 1rem; 
+}
+
+.typer__btn--container {
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+}
+
+.typer__counter {
+    text-align: right;
+    margin-right: 1rem;
+}
+
+.typer__btn {
+    background-color: #5C415D;
+    color: #FFFC31;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+
+
