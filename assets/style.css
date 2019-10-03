@@ -10,6 +10,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    word-break: break-all;
+}
+
 main {
     width: 80vw;
     margin: auto;
@@ -31,6 +35,24 @@ nav {
 
 .menu img {
     width: 2.5rem;
+}
+
+.menu__links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    color: #FFFC31;
+    padding: 0;
+    font-size: 1.25rem;
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    background-color: #5C415D;
+}
+
+.menu__links a {
+    color: #FFFC31;
 }
 
 /* TYPER */
