@@ -1,9 +1,10 @@
-var typer = document.querySelector ("#typer");
-var typerBtn = document.querySelector ("#typer__btn");
-var tweets = document.querySelector ("#tweets");
-var counter = document.querySelector ("#counter");
-var menuHamburguer = document.querySelector ("#menu");
-var menu = document.querySelector (".menu__links");
+const typer = document.querySelector ("#typer");
+const typerBtn = document.querySelector ("#typer__btn");
+const tweets = document.querySelector ("#tweets");
+const counter = document.querySelector ("#counter");
+const menuHamburguer = document.querySelector ("#menu");
+const menu = document.querySelector (".menu__links");
+
 
 
 // MENU 
@@ -21,10 +22,22 @@ menuHamburguer.addEventListener ('click', function () {
 
 typerBtn.addEventListener ("click", function (){
     let tweet = document.createElement ("p");
+    tweet.classList()
     tweets.appendChild(tweet);
-    tweet.innerHTML = (typer.value);
+
+    tweet.innerHTML = `
+        <div class="tweets__container">
+            <div class="tweets__user">
+                <img src="http://placekitten.com/30" alt="">
+                <p>Usuário</p>
+            </div>
+            <p>${typer.value}</p>
+        </div>
+    `;
     typer.value = " ";
     counter.innerHTML = "0";
+
+
 });
 
 
@@ -41,6 +54,9 @@ typer.addEventListener("input", function (){
         counter.style.fontWeight = "none";
     }
 });
+
+
+
 
 
 
