@@ -119,10 +119,27 @@ nav {
 
 /* CADASTRO */
 
-.cadastro {
-    width: 60vw;
+.cadastro__container {
+    width: 15rem;
+    border-radius: 1rem;
+    padding: 1rem 0;
     background-color: #5C415D;
+    margin: 8rem auto;
+}
+
+.cadastro__form {
+    display: flex;
+    flex-direction: column;
+    width: 11rem;
     margin: auto;
+    color: white;
+}
+
+.cadastro__input {
+    margin: 0 0 1rem 0;
+    border: none;
+    border-bottom: 1px solid #FFFC31;
+    background-color: #5C415D
 }
 
 
