@@ -22,7 +22,6 @@ menuHamburguer.addEventListener ('click', function () {
 
 typerBtn.addEventListener ("click", function (){
     let tweet = document.createElement ("p");
-    tweet.classList()
     tweets.appendChild(tweet);
 
     tweet.innerHTML = `
@@ -36,8 +35,6 @@ typerBtn.addEventListener ("click", function (){
     `;
     typer.value = " ";
     counter.innerHTML = "0";
-
-
 });
 
 
@@ -45,13 +42,16 @@ typerBtn.addEventListener ("click", function (){
 
 typer.addEventListener("input", function (){
     counter.innerHTML = typer.value.length;
-    if(typer.value.length > 140) {
-        counter.style.color = "red";
-        counter.style.fontWeight = "bold";
-        console.log("oi");
-    } else {
+    if (typer.value.length < 140) {
         counter.style.color = "black";
         counter.style.fontWeight = "none";
+        typerBtn.disabled = false;
+
+    } else {
+        counter.style.color = "red";
+        counter.style.fontWeight = "bold";
+        typerBtn.disabled = true;
+        
     }
 });
 
