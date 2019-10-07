@@ -107,6 +107,7 @@ nav {
 .tweets__container {
     border: 1px solid #5C415D;
     border-radius: 0.5rem;
+    padding: 0.5rem 0 0 0.5rem;
 }
 
 .tweets__user {
@@ -114,3 +115,47 @@ nav {
     align-items: center;
     justify-content: left;
 }
+
+
+/* CADASTRO */
+
+.cadastro {
+    width: 60vw;
+    background-color: #5C415D;
+    margin: auto;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 900px) {
+    body {
+      font-size: 16px;
+    }
+
+    main {
+        width: 90vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    .typer {
+        width: 20rem;
+        margin: 0;
+    }
+    
+    .tweets {
+        width: 50rem;
+        background-color: #ffcdbc66;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .tweets__container {
+        width: 49rem;
+        margin: auto;
+        background-color: white;
+    }
+  }
