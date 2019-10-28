@@ -4,7 +4,6 @@ const tweets = document.querySelector ("#tweets");
 const counter = document.querySelector ("#counter");
 
 
-
 // MENU 
 
 const menuHamburguer = document.querySelector ("#menu");
@@ -16,23 +15,7 @@ menuHamburguer.addEventListener ('click', function () {
     } else {
         menu.style.height = "3rem";
     }  
-})
-
-
-// CADASTRO
-
-// const nomeCadastro = document.querySelector ("#cadastro__nome");
-// const senhaCadastro = document.querySelector ("#cadastro__nome");
-// const formCadastro = document.querySelector (".cadastro__form");
-
-// formCadastro.addEventListener ('submit', function (){
-//    localStorage.setItem('nome', nomeCadastro.value);
-//    var nomeUsuario = localStorage.getItem('nome');
-//    console.log(nomeUsuario);
-// });
-
-
-
+});
 
 // FUNÇÃO TWEETAR
 
@@ -46,6 +29,9 @@ typerBtn.addEventListener ('click', function (){
                     <p>Usuário</p>
                 </div>
                 <p>${typer.value}</p>
+                <div class="tweets__btn">
+                    <img class="tweets__like" src="assets/img/like-red.svg" alt="Ícone de coração">
+                </div>
             </div>
         `;
     } 
@@ -70,3 +56,15 @@ typer.addEventListener('input', function (){
         
     }
 });
+
+
+// FUNÇÃO LIKE 
+
+// var likes = document.querySelectorAll(".tweets__like");
+
+// likes.forEach(like => {
+//     like.addEventListener('click', function(){
+//         like.classList.toggle("tweets__like--red");
+//         console.log(likes);
+//     })
+// })

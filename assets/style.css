@@ -9,6 +9,10 @@ body {
     font-size: 14px;
 }
 
+h2 {
+    color: #5C415D;
+}
+
 a {
     text-decoration: none;
 }
@@ -88,7 +92,7 @@ nav {
     margin-right: 1rem;
 }
 
-.typer__btn {
+.typer__btn, .btn {
     background-color: #5C415D;
     color: #FFFC31;
     box-shadow: 2px 2px 5px grey;
@@ -123,6 +127,21 @@ nav {
     justify-content: left;
 }
 
+.tweets__btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.tweets__like {
+    width: 1rem;
+    filter: grayscale()
+}
+
+.tweets__like--red {
+    filter: none;
+}
+
 
 /* CADASTRO */
 
@@ -145,10 +164,22 @@ nav {
 .cadastro__input {
     margin: 0 0 1rem 0;
     border: none;
+    outline: none;
     color: #FFFC31;
     border-bottom: 1px solid #FFFC31;
     background-color: #5C415D
 }
+
+.form__btn {
+    background-color: #FFFC31;
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+
+
+/* IMAGENS */
 
 .cat__images {
     display: flex;
@@ -163,7 +194,6 @@ nav {
 }
 
 .cat__images img:hover {
-    scale: 1rem;
     opacity: 0.7;
     transition-duration: 0.5s;
     transition-timing-function: ease;

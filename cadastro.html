@@ -13,7 +13,7 @@
     
     <nav>
         <section class="menu">
-            <img id="menu" src="./assets/img/menu.svg" alt="Menu">
+            <img id="menu" src="./assets/img/pet.svg" alt="Menu">
             <h2>catwitter</h2>
         </section>
         <menu class="menu__links">
@@ -30,12 +30,12 @@
     
     <section class="cadastro">
         <div class="cadastro__container">
-            <form method="POST" action="./catweets.html" class="cadastro__form">   
+            <form method="POST" action="./catweets.html" class="cadastro__form" name="form">   
                 <label for="cadastro__nome">Nome de usuário</label>
-                <input id="cadastro__nome" class="cadastro__input" type="text">
+                <input id="cadastro__nome" class="cadastro__input" type="text" name="form__name" required autofocus>
                 <label for="cadastro__senha">Senha</label>
-                <input id="cadastro__senha" class="cadastro__input" type="password">
-                <input type="submit" value="Login">
+                <input id="cadastro__senha" class="cadastro__input" type="password" name="form__password" required minlength="6">
+                <input class="form__btn" type="submit" value="Login">
             </form>
         </div>
         
