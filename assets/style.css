@@ -178,7 +178,6 @@ nav {
 }
 
 
-
 /* IMAGENS */
 
 .cat__images {
@@ -199,11 +198,17 @@ nav {
     transition-timing-function: ease;
 }
 
+
 /* MEDIA QUERIES */
 
 @media (min-width: 900px) {
     body {
-      font-size: 16px;
+        font-size: 16px;
+        background-image: url(./img/cat-play.svg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 18rem;
+        background-position: 2rem bottom;
     }
 
     main {
@@ -220,15 +225,15 @@ nav {
     }
     
     .tweets {
-        width: 40rem;
-        background-color: #ffcdbc66;
         border-radius: 1rem;
         padding: 1rem;
     }
 
     .tweets__container {
-        width: 38rem;
+        width: 34rem;
         margin: .5rem auto;
         background-color: white;
     }
+
+
   }
