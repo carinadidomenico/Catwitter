@@ -56,6 +56,7 @@ nav {
 }
 
 .menu__links a {
+    transition: 0.5s ease-in-out;
     color: #FFFC31;
     cursor: pointer;
 }
@@ -104,10 +105,16 @@ nav {
 
 /* TWEETS */
 
+.tweets {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .tweets__container {
     border: 1px solid #5C415D;
     border-radius: 0.5rem;
-    padding: 0.5rem 0 0 0.5rem;
+    padding: .5rem;
+    margin: .5rem 0;
 }
 
 .tweets__user {
@@ -138,10 +145,29 @@ nav {
 .cadastro__input {
     margin: 0 0 1rem 0;
     border: none;
+    color: #FFFC31;
     border-bottom: 1px solid #FFFC31;
     background-color: #5C415D
 }
 
+.cat__images {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cat__images img {
+    margin: 1rem auto;
+    border-radius: 1rem;
+}
+
+.cat__images img:hover {
+    scale: 1rem;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
 
 /* MEDIA QUERIES */
 

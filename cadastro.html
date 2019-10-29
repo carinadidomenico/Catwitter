@@ -18,8 +18,8 @@
         </section>
         <menu class="menu__links">
             <a href="">fórum</a>
-            <a href="">tweets</a>
-            <a href="">fotos</a>
+            <a href="./catweets.html">tweets</a>
+            <a href="./catimages.html">fotos</a>
             <a href="./cadastro.html">sair</a>
         </menu>
     </nav>
@@ -30,12 +30,12 @@
     
     <section class="cadastro">
         <div class="cadastro__container">
-            <form action="post" class="cadastro__form">   
+            <form method="POST" action="./catweets.html" class="cadastro__form">   
                 <label for="cadastro__nome">Nome de usuário</label>
                 <input id="cadastro__nome" class="cadastro__input" type="text">
                 <label for="cadastro__senha">Senha</label>
                 <input id="cadastro__senha" class="cadastro__input" type="password">
-                <input type="button" value="Login">
+                <input type="submit" value="Login">
             </form>
         </div>
         
@@ -44,5 +44,5 @@
     <!-- FINAL CADASTRO -->
     
 </body>
-<script src="assets/cadastro.js"></script>
+<script src="assets/script.js"></script>
 </html>

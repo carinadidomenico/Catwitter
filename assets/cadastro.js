@@ -1,14 +1,9 @@
-const menuHamburguer = document.querySelector ("#menu");
-const menu = document.querySelector (".menu__links");
+const nomeCadastro = document.querySelector ("#cadastro__nome");
+const senhaCadastro = document.querySelector ("#cadastro__nome");
+const formCadastro = document.querySelector ("#cadastro__form");
 
+// CADASTRO
 
-
-// MENU 
-
-menuHamburguer.addEventListener ('click', function () {
-    if (menu.style.height){
-        menu.style.height = null;        
-    } else {
-        menu.style.height = "3rem";
-    }  
-})
+formCadastro.addEventListener ('submit', function (){
+    
+}); 

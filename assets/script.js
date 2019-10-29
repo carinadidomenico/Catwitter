@@ -2,12 +2,13 @@ const typer = document.querySelector ("#typer");
 const typerBtn = document.querySelector ("#typer__btn");
 const tweets = document.querySelector ("#tweets");
 const counter = document.querySelector ("#counter");
-const menuHamburguer = document.querySelector ("#menu");
-const menu = document.querySelector (".menu__links");
 
 
 
 // MENU 
+
+const menuHamburguer = document.querySelector ("#menu");
+const menu = document.querySelector (".menu__links");
 
 menuHamburguer.addEventListener ('click', function () {
     if (menu.style.height){
@@ -18,13 +19,26 @@ menuHamburguer.addEventListener ('click', function () {
 })
 
 
+// CADASTRO
+
+// const nomeCadastro = document.querySelector ("#cadastro__nome");
+// const senhaCadastro = document.querySelector ("#cadastro__nome");
+// const formCadastro = document.querySelector (".cadastro__form");
+
+// formCadastro.addEventListener ('submit', function (){
+//    localStorage.setItem('nome', nomeCadastro.value);
+//    var nomeUsuario = localStorage.getItem('nome');
+//    console.log(nomeUsuario);
+// });
+
+
+
+
 // FUNÇÃO TWEETAR
 
-typerBtn.addEventListener ("click", function (){
-    let tweet = document.createElement ("p");
-    tweets.appendChild(tweet);
-
-    tweet.innerHTML = `
+typerBtn.addEventListener ('click', function (){
+    
+    tweets.innerHTML += `
         <div class="tweets__container">
             <div class="tweets__user">
                 <img src="http://placekitten.com/30" alt="">
@@ -40,7 +54,7 @@ typerBtn.addEventListener ("click", function (){
 
 // CONTADOR
 
-typer.addEventListener("input", function (){
+typer.addEventListener('input', function (){
     counter.innerHTML = typer.value.length;
     if (typer.value.length < 140) {
         counter.style.color = "black";
@@ -54,12 +68,3 @@ typer.addEventListener("input", function (){
         
     }
 });
-
-
-
-
-
-
-
-
-
