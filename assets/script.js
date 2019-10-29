@@ -37,17 +37,19 @@ menuHamburguer.addEventListener ('click', function () {
 // FUNÇÃO TWEETAR
 
 typerBtn.addEventListener ('click', function (){
-    
-    tweets.innerHTML += `
-        <div class="tweets__container">
-            <div class="tweets__user">
-                <img src="http://placekitten.com/30" alt="">
-                <p>Usuário</p>
+
+    if(typer.value != 0) {
+        tweets.innerHTML += `
+            <div class="tweets__container">
+                <div class="tweets__user">
+                    <img src="http://placekitten.com/30" alt="">
+                    <p>Usuário</p>
+                </div>
+                <p>${typer.value}</p>
             </div>
-            <p>${typer.value}</p>
-        </div>
-    `;
-    typer.value = " ";
+        `;
+    } 
+    typer.value = "";
     counter.innerHTML = "0";
 });
 
