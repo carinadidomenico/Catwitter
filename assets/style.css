@@ -112,9 +112,9 @@ nav {
 
 .tweets__container {
     border: 1px solid #5C415D;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     padding: .5rem;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
 }
 
 .tweets__user {
@@ -180,7 +180,7 @@ nav {
         width: 90vw;
         display: flex;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-top: 2rem;
     }
 
@@ -190,15 +190,15 @@ nav {
     }
     
     .tweets {
-        width: 50rem;
+        width: 40rem;
         background-color: #ffcdbc66;
         border-radius: 1rem;
         padding: 1rem;
     }
 
     .tweets__container {
-        width: 49rem;
-        margin: auto;
+        width: 38rem;
+        margin: .5rem auto;
         background-color: white;
     }
   }
