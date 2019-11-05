@@ -135,13 +135,8 @@ nav {
 
 .tweets__like {
     width: 1rem;
-    filter: grayscale()
+    filter: grayscale(100%);
 }
-
-.tweets__like--red {
-    filter: none;
-}
-
 
 /* CADASTRO */
 
@@ -190,12 +185,13 @@ nav {
 .cat__images img {
     margin: 1rem auto;
     border-radius: 1rem;
+    transition-duration: 0.5s;
 }
 
 .cat__images img:hover {
     opacity: 0.7;
     transition-duration: 0.5s;
-    transition-timing-function: ease;
+    border-radius: 0;
 }
 
 
@@ -204,11 +200,6 @@ nav {
 @media (min-width: 900px) {
     body {
         font-size: 16px;
-        background-image: url(./img/cat-play.svg);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: 18rem;
-        background-position: 2rem bottom;
     }
 
     main {
@@ -217,6 +208,14 @@ nav {
         align-items: flex-start;
         justify-content: space-around;
         margin-top: 2rem;
+    }
+
+    .background__image {
+        background-image: url(./img/cat-play.svg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 18rem;
+        background-position: 2rem bottom;
     }
 
     .typer {

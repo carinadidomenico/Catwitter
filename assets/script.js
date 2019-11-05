@@ -2,7 +2,7 @@ const typer = document.querySelector ("#typer");
 const typerBtn = document.querySelector ("#typer__btn");
 const tweets = document.querySelector ("#tweets");
 const counter = document.querySelector ("#counter");
-
+var like = document.querySelectorAll (".tweets__like");
 
 // MENU 
 
@@ -30,7 +30,7 @@ typerBtn.addEventListener ('click', function (){
                 </div>
                 <p>${typer.value}</p>
                 <div class="tweets__btn">
-                    <img class="tweets__like" src="assets/img/like-red.svg" alt="Ícone de coração">
+                    <img onclick="likes()" class="tweets__like" src="assets/img/like-red.svg" alt="Ícone de coração">
                 </div>
             </div>
         `;
@@ -43,6 +43,7 @@ typerBtn.addEventListener ('click', function (){
 // CONTADOR
 
 typer.addEventListener('input', function (){
+
     counter.innerHTML = typer.value.length;
     if (typer.value.length < 140) {
         counter.style.color = "black";
@@ -52,19 +53,21 @@ typer.addEventListener('input', function (){
     } else {
         counter.style.color = "red";
         counter.style.fontWeight = "bold";
-        typerBtn.disabled = true;
-        
+        typerBtn.disabled = true;  
     }
 });
 
 
 // FUNÇÃO LIKE 
 
-// var likes = document.querySelectorAll(".tweets__like");
+function likes () {
+    console.log(like.style.filter);
 
-// likes.forEach(like => {
-//     like.addEventListener('click', function(){
-//         like.classList.toggle("tweets__like--red");
-//         console.log(likes);
-//     })
-// })
+    like.forEach (like => {
+        if(like.style.filter == "grayscale(100%)") {
+            like.style.filter = "none";
+        } else {
+            like.style.filter = "grayscale(100%)"
+        }
+    })
+}
