@@ -30,11 +30,22 @@
     
     <section class="cadastro">
         <div class="cadastro__container">
-            <form method="POST" action="./catweets.html" class="cadastro__form" name="form">   
-                <label for="cadastro__nome">Nome de usuário</label>
+            <form method="POST" action="./catweets.html" class="cadastro__form" name="form">
+                <label for="cadastro__nome">Nome Completo </label>
                 <input id="cadastro__nome" class="cadastro__input" type="text" name="form__name" required autofocus>
+
+                <label for="cadastro__idade">Idade</label>
+                <input id="cadastro__idade" class="cadastro__input" type="number" name="form__idade">
+
+                <label for="cadastro__gatos">Quantos gatos?</label>
+                <input id="cadastro__gatos" class="cadastro__input" type="number" name="form__gatos" required>
+
+                <label for="cadastro__nivel">Senha</label>
+                <input id="cadastro__nivel" class="cadastro__input" type="range" min="0" max="10" value="0" name="form__nivel" require>
+
                 <label for="cadastro__senha">Senha</label>
                 <input id="cadastro__senha" class="cadastro__input" type="password" name="form__password" required minlength="6">
+
                 <input class="form__btn" type="submit" value="Login">
             </form>
         </div>
