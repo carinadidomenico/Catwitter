@@ -2,7 +2,6 @@ const typer = document.querySelector ("#typer");
 const typerBtn = document.querySelector ("#typer__btn");
 const tweets = document.querySelector ("#tweets");
 const counter = document.querySelector ("#counter");
-var like = document.querySelectorAll (".tweets__like");
 
 // MENU 
 
@@ -17,10 +16,28 @@ menuHamburguer.addEventListener ('click', function () {
     }  
 });
 
+// // CADASTRO E LOGIN
+
+// var login = document.querySelector(".login");
+// var form = document.querySelector("form");
+
+// login.addEventListener('click', function(){
+//     form.innerHTML = `
+//         <label for="cadastro__user">Nome de Usuário</label>
+//         <input id="cadastro__user" class="cadastro__input" type="text" name="form__user" required autofocus>
+
+//         <label for="cadastro__senha">Senha</label>
+//         <input id="cadastro__senha" class="cadastro__input" type="password" name="form__password" required minlength="6">
+
+//         <input class="form__btn" type="submit" value="Login">
+
+//     `
+// });
+
 // FUNÇÃO TWEETAR
 
 typerBtn.addEventListener ('click', function (){
-
+    
     if(typer.value != 0) {
         tweets.innerHTML += `
             <div class="tweets__container">
@@ -30,7 +47,7 @@ typerBtn.addEventListener ('click', function (){
                 </div>
                 <p>${typer.value}</p>
                 <div class="tweets__btn">
-                    <img onclick="likes()" class="tweets__like" src="assets/img/like-red.svg" alt="Ícone de coração">
+                    <img class="tweets__like" src="assets/img/like-red.svg" alt="Ícone de coração">
                 </div>
             </div>
         `;
@@ -58,16 +75,30 @@ typer.addEventListener('input', function (){
 });
 
 
-// FUNÇÃO LIKE 
+// FUNÇÃO LIKE
 
-function likes () {
-    console.log(like.style.filter);
 
-    like.forEach (like => {
+var likes = document.querySelectorAll (".tweets__like");
+
+
+// for(var i = 0; i < likes.length; i++) {
+//     likes[i].addEventListener('click', function() {
+        
+        // if(likes[i].style.filter == "grayscale(100%)") {
+        //     likes[i].style.filter = "none";
+        // } else {
+        //     likes[i].style.filter = "grayscale(100%)";
+        // }        
+//     });
+// }
+
+likes.forEach ((like)=>{
+    like.addEventListener('click', function() {
+        console.log('oi');
         if(like.style.filter == "grayscale(100%)") {
             like.style.filter = "none";
         } else {
-            like.style.filter = "grayscale(100%)"
-        }
-    })
-}
+            like.style.filter = "grayscale(100%)";
+        } 
+    });
+});

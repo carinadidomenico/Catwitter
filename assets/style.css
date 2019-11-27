@@ -18,7 +18,7 @@ a {
 }
 
 p {
-    word-break: break-all;
+    word-break: break-word;
 }
 
 main {
@@ -138,6 +138,13 @@ nav {
     filter: grayscale(100%);
 }
 
+.first__tweet {
+    border: 1px solid #5C415D;
+    border-radius: .5rem;
+    padding: .5rem;
+    margin: 0.5rem 0;
+}
+
 /* CADASTRO */
 
 .cadastro__container {
@@ -145,7 +152,7 @@ nav {
     border-radius: 1rem;
     padding: 1rem 0;
     background-color: #5C415D;
-    margin: 8rem auto;
+    margin: 4rem auto;
 }
 
 .cadastro__form {
@@ -189,6 +196,15 @@ input[type=range]::-webkit-slider-thumb{
     border: none;
     padding: 1rem;
     border-radius: .5rem;
+    cursor: pointer;
+}
+
+.login {
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    font-size: .7rem;
+    cursor: pointer;
 }
 
 
@@ -251,6 +267,14 @@ input[type=range]::-webkit-slider-thumb{
         width: 34rem;
         margin: .5rem auto;
         background-color: white;
+    }
+
+    .cadastro__container {
+        width: 25rem;
+    }
+
+    .cadastro__form {
+        width: 20rem;
     }
 
 
