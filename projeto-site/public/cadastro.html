@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Catwitter</title>
+</head>
+<body class="backgroung__image">
+    <!-- INÍCIO NAVBAR -->
+    
+    <nav>
+        <section class="menu">
+            <img id="menu" src="./assets/img/pet.svg" alt="Menu">
+            <h2>catwitter</h2>
+        </section>
+        <menu class="menu__links">
+            <a href="">fórum</a>
+            <a href="./catweets.html">tweets</a>
+            <a href="./catimages.html">fotos</a>
+            <a href="./cadastro.html">sair</a>
+        </menu>
+    </nav>
+    
+    <!-- FINAL NAVBAR -->
+    
+    <!-- INICÍO CADASTRO -->
+    
+    <section class="cadastro">
+        <div class="cadastro__container">
+            <form method="POST" action="./catweets.html" class="cadastro__form" name="form">
+                <label for="cadastro__nome">Nome Completo </label>
+                <input id="cadastro__nome" class="cadastro__input" type="text" name="form__name" required autofocus>
+
+                <label for="cadastro__email">Email</label>
+                <input id="cadastro__email" class="cadastro__input" type="email" name="form__email">
+
+                <label for="cadastro__data">Data de Nascimento</label>
+                <input id="cadastro__data" class="cadastro__input" type="date" name="form__data">
+
+                <label for="cadastro__gatos">Quantos gatos?</label>
+                <input id="cadastro__gatos" class="cadastro__input" type="number" name="form__gatos" required>
+
+                <label for="cadastro__nivel">Nível de amor</label>
+                <input id="cadastro__nivel" class="cadastro__input" type="range" min="0" max="10" value="0" name="form__nivel" require>
+
+                <label for="cadastro__user">Nome de Usuário</label>
+                <input id="cadastro__user" class="cadastro__input" type="text" name="form__user" required>
+
+                <label for="cadastro__senha">Senha</label>
+                <input id="cadastro__senha" class="cadastro__input" type="password" name="form__password" required minlength="6">
+
+                <input class="form__btn" type="submit" value="Cadastro">
+                <p class="login">Já possui cadastro? Faça seu login!</p>
+            </form>
+        </div>
+        
+    </section>
+    
+    <!-- FINAL CADASTRO -->
+    
+</body>
+<script src="assets/script.js"></script>
+<script>
+
+    function cadastrar() {
+        aguardar();
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+        }).then(function (response) {
+            
+            if (response.ok) {
+
+                window.location.href='login.html';
+
+            } else {
+
+                console.log('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
+    }
+
+</script>
+</html>
