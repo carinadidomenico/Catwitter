@@ -203,6 +203,7 @@ input[type=range]::-webkit-slider-thumb{
     color: white;
     text-decoration: underline;
     text-align: center;
+    margin: 1rem auto;
     font-size: .7rem;
     cursor: pointer;
 }

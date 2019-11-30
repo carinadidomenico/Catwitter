@@ -10,12 +10,12 @@ module.exports = (sequelize, DataTypes) => {
 		idTweet: {
 			field: `idTweet`,
 			type: DataTypes.INTEGER,
-			allowNull: false
+			allowNull: true
 		},
 		textoTweet: {
 			field: `textoTweet`,
 			type: DataTypes.STRING,
-			allowNull: false
+			allowNull: true
 		},
 	}, 
 	{

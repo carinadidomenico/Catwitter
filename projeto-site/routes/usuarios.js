@@ -37,12 +37,16 @@ router.post('/autenticar', function(req, res, next) {
 });
 
 /* Cadastrar usuário */
-router.post('/', function(req, res, next) {
+router.post('/cadastrar', function(req, res, next) {
 	console.log('Criando um usuário');
 	
 	Usuario.create({
-		nome : req.body.nome,
-		login : req.body.login,
+		nomeCompleto : req.body.nomeCompleto,
+		email : req.body.email,
+		dataNasc: req.body.dataNasc,
+		qtdGatos: req.body.qtdGatos,
+		nivelAmor: req.body.nivelAmor,
+		nomeUsuario: req.body.nomeUsuario,
 		senha: req.body.senha
 	}).then(resultado => {
 		console.log(`Registro criado: ${resultado}`)

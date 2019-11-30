@@ -30,31 +30,37 @@
     
     <section class="cadastro">
         <div class="cadastro__container">
-            <form method="POST" action="./catweets.html" class="cadastro__form" name="form">
+            <form id="form_cadastro" method="post" class="cadastro__form" onsubmit="return cadastrar()">
                 <label for="cadastro__nome">Nome Completo </label>
-                <input id="cadastro__nome" class="cadastro__input" type="text" name="form__name" required autofocus>
+                <input id="cadastro__nome" class="cadastro__input" type="text" name="nomeCompleto" required autofocus>
 
                 <label for="cadastro__email">Email</label>
-                <input id="cadastro__email" class="cadastro__input" type="email" name="form__email">
+                <input id="cadastro__email" class="cadastro__input" type="email" name="email">
 
                 <label for="cadastro__data">Data de Nascimento</label>
-                <input id="cadastro__data" class="cadastro__input" type="date" name="form__data">
+                <input id="cadastro__data" class="cadastro__input" type="date" name="dataNasc">
 
                 <label for="cadastro__gatos">Quantos gatos?</label>
-                <input id="cadastro__gatos" class="cadastro__input" type="number" name="form__gatos" required>
+                <input id="cadastro__gatos" class="cadastro__input" type="number" name="qtdGatos" required>
 
                 <label for="cadastro__nivel">Nível de amor</label>
-                <input id="cadastro__nivel" class="cadastro__input" type="range" min="0" max="10" value="0" name="form__nivel" require>
+                <input id="cadastro__nivel" class="cadastro__input" type="range" min="0" max="10" value="0" name="nivelAmor" require>
 
                 <label for="cadastro__user">Nome de Usuário</label>
-                <input id="cadastro__user" class="cadastro__input" type="text" name="form__user" required>
+                <input id="cadastro__user" class="cadastro__input" type="text" name="nomeUsuario" required>
 
                 <label for="cadastro__senha">Senha</label>
-                <input id="cadastro__senha" class="cadastro__input" type="password" name="form__password" required minlength="6">
+                <input id="cadastro__senha" class="cadastro__input" type="password" name="senha" required minlength="6">
 
-                <input class="form__btn" type="submit" value="Cadastro">
-                <p class="login">Já possui cadastro? Faça seu login!</p>
+                <button id="btn_entrar" class="from__btn">Cadastrar</button>
+                <!-- <input id="btn_entrar" class="form__btn" type="submit" value="Cadastro"> -->
+                <a href="./login.html" class="login">Já possui cadastro? Faça seu login!</a>
             </form>
+            <img src="assets/img/cat-happy.svg" id="img_aguarde" class="loagin__img" style="display: none;" width="200px; text-align:center;">
+    
+    <div id="div_erro">
+        Erro no cadastro
+    </div>
         </div>
         
     </section>
