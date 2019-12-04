@@ -3,6 +3,7 @@ const typerBtn = document.querySelector ("#typer__btn");
 const tweets = document.querySelector ("#tweets");
 const counter = document.querySelector ("#counter");
 
+
 // MENU 
 
 const menuHamburguer = document.querySelector ("#menu");
@@ -26,7 +27,7 @@ typerBtn.addEventListener ('click', function (){
             <div class="tweets__container">
                 <div class="tweets__user">
                     <img src="http://placekitten.com/30" alt="">
-                    <p>Usuário</p>
+                    <p>${login}</p>
                 </div>
                 <p>${typer.value}</p>
                 <div class="tweets__btn">
