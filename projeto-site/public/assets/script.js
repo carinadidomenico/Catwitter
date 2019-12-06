@@ -24,33 +24,35 @@ typerBtn.addEventListener ('click', function (){
     
     if(typer.value != 0) {
         tweets.innerHTML += `
-            <div class="tweets__container">
-                <div class="tweets__user">
-                    <img src="http://placekitten.com/30" alt="">
-                    <p>${login}</p>
-                </div>
-                <p>${typer.value}</p>
-                <div class="tweets__btn">
-                    <img class="tweets__like" src="assets/img/like-red.svg" alt="Ícone de coração">
-                </div>
+        <div class="tweets__container">
+            <div class="tweets__user">
+                <img src="http://placekitten.com/30" alt="">
+                <p>Usuario</p>
             </div>
+            <p>${typer.value}</p>
+            <div class="tweets__btn">
+                <img class="tweets__like" src="assets/img/like-red.svg" alt="Ícone de coração">
+            </div>
+        </div>
         `;
     } 
     typer.value = "";
     counter.innerHTML = "0";
+    
+    configLoves();
 });
 
 
 // CONTADOR
 
 typer.addEventListener('input', function (){
-
+    
     counter.innerHTML = typer.value.length;
     if (typer.value.length < 140) {
         counter.style.color = "black";
         counter.style.fontWeight = "none";
         typerBtn.disabled = false;
-
+        
     } else {
         counter.style.color = "red";
         counter.style.fontWeight = "bold";
@@ -61,33 +63,18 @@ typer.addEventListener('input', function (){
 
 // FUNÇÃO LIKE
 
-
-var likes = document.getElementsByClassName ("tweets__like");
-console.log(likes)
-
-
-for(var i = 0; i < likes.length; i++) {
-    console.log(likes)
-    console.log(i)
-    likes[i].addEventListener('click', function() {
-        var like = this.nextElementSibling;
-        console.log("olar")
-
-        if(like.style.filter == "grayscale(100%)") {
-            like.style.filter = "none";
-        } else {
-            like.style.filter = "grayscale(100%)";
-        }        
-    });
+function configLoves() {
+    let likes = document.getElementsByClassName ("tweets__like");
+    
+    for (let i = 0; i < likes.length; i++) {
+        
+        likes[i].addEventListener('click', function() {
+            
+            if(this.style.filter == "none") {
+                this.style.filter = "grayscale(100%)";
+            } else {
+                this.style.filter = "none";
+            }        
+        });
+    }
 }
-
-// likes.forEach ((like)=>{
-//     like.addEventListener('click', function() {
-//         console.log('oi');
-//         if(like.style.filter == "grayscale(100%)") {
-//             like.style.filter = "none";
-//         } else {
-//             like.style.filter = "grayscale(100%)";
-//         } 
-//     });
-// });
